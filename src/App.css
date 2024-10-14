@@ -1,38 +1,423 @@
-.App {
-  text-align: center;
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Mulish", sans-serif;
+}
+body {
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row {
+  margin: 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.aboutus {
+  width: 5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.nav-item {
+  padding-left: 40px !important;
+  padding-top: 1em !important;
+}
+
+.conandgetbtn {
+  margin-left: 6em !important;
+}
+.button1 {
+  width: 150px;
+  height: 30px;
+}
+
+.firstsectioncon {
+  background-image: url("assets/images/Mask\ group\ \(2\).png");
+  background-repeat: no-repeat;
+}
+
+.welcomecard {
+  width: 300px;
+  height: 30px;
+  margin-inline: auto !important;
+  opacity: 70%;
+}
+
+.organizationtext {
+  width: 757px;
+  margin-inline: auto !important;
+  font-family: "Mulish";
+  font-size: 64px;
+}
+.safetymanagement {
+  font-size: 18px;
+  font-family: "Mulish";
+  width: 757px;
+  margin-inline: auto !important;
+}
+
+.employeesimages {
+  padding-left: 4em !important;
+}
+.partnerratings {
+  padding-top: 5em !important;
+}
+
+.servicerange {
+  font-size: 40px;
+  width: 515px;
+}
+.specialises_oil_trading {
+  font-size: 18px;
+  width: 551px;
+  padding-left: 6em !important;
+}
+
+.second_section_sub {
+  padding-top: 8em !important;
+}
+.ratecards {
+  width: 90%;
+}
+.thirdsection {
+  background-image: url(assets/images/background\(2\).png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+
+.corecard {
+  width: 400px;
+  height: 30px;
+  margin-inline: auto !important;
+  opacity: 70%;
+}
+.whatmakes {
+  font-size: 40px;
+}
+
+.fourthsection {
+  padding-top: 2em !important;
+}
+
+.coretext {
+  font-size: 40px;
+}
+
+.corevaluetext {
+  font-size: 18px;
+  width: 620px;
+}
+.missiontext {
+  font-size: 18px;
+  width: 620px;
+}
+
+.missionimage {
+  width: 90%;
+}
+
+.reachouttext {
+  font-size: 24px;
+  width: 538px;
+  margin-inline: auto !important;
+}
+
+.button2 {
+  width: 150px;
+  height: 30px;
+}
+.contacttext {
+  font-size: 56px;
+  color: black;
+}
+.contactcard {
+  height: 300px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.reachtext {
+  font-size: 48px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contactinformation {
+  padding-top: 5em !important;
+}
+.contactinformationlist {
+  padding-top: 6em !important;
+}
+
+.contactdetails {
+  font-size: 16px;
+}
+
+.reach_image {
+  width: 90%;
+}
+.employeenames {
+  font-size: 24px;
+  color: orange;
+  font-weight: 800;
+}
+
+.employeeposition {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.employeereviews {
+  font-size: 14px;
+  width: 386px;
+  font-weight: 400;
+}
+
+.employeecard {
+  width: 535px;
+  height: 200px;
+  border-radius: 16px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-left: 5px solid orange !important;
+  gap: 1em;
+  margin-top: 3em !important;
+}
+
+.employeeimage {
+  width: 50%;
+  margin-left: 5px !important;
+  /* height: 120px; */
+}
+
+.footerlist {
+  gap: 12em;
+}
+.descriptivelist {
+  padding-top: 20px !important;
+}
+
+.new {
+  background-color: #f3e8ff;
+  font-size: 14px;
+  padding: 4px !important;
+  border-radius: 4px;
+}
+.line1 {
+  height: 10px !important;
+  width: 90%;
+  color: orange;
+  margin-inline: auto !important;
+}
+
+.lastfooternote {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chevrondiv {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 10px 20px !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .bbb {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .firstsectioncon {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    z-index: 999;
+  }
+
+  .employeecard {
+    width: 100%;
+    flex-direction: column;
+    height: 370px;
+    /* margin-left: 8em !important; */
+  }
+
+  .contactinformationlist {
+    padding-top: 1em !important;
+    text-align: center;
+  }
+
+  .reach_image {
+    width: 100%;
+    /* margin-left: 5em !important; */
+  }
+
+  .contactcard {
+    margin-top: 3em !important;
+  }
+
+  .welcomecard {
+    width: 80%;
+
+    margin-inline: auto !important;
+  }
+
+  .organizationtext {
+    width: 80%;
+    font-size: 20px;
+  }
+
+  .safetymanagement {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .employeesimages {
+    padding-left: 0 !important;
+    width: 100%;
+  }
+
+  .partners_logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partnerratings {
+    padding-top: 2em !important;
+  }
+
+  .workgroupimage {
+    width: 100%;
+  }
+
+  .servicerange {
+    font-size: 25px;
+    width: 100%;
+    padding-left: 1em !important;
+  }
+  .specialises_oil_trading {
+    font-size: 15px;
+    width: 100%;
+    padding-left: 1em !important;
+    padding-top: 1em !important;
+  }
+
+  .second_section_sub {
+    padding-top: 2em !important;
+  }
+
+  .corecard {
+    width: 80%;
+    height: 30px;
+    margin-inline: auto !important;
+    opacity: 70%;
+  }
+
+  .whatmakes_us_different_images {
+    flex-direction: column;
+  }
+
+  /* .thirdsection{
+    width: 100%;
+    height: 75vh;
+    
+   
+  } */
+
+  .workcontentcon {
+    padding-top: 2em !important;
+    padding-left: 1.5em !important;
+  }
+
+  .workrmissionimage {
+    width: 80%;
+  }
+
+  .fourthsection {
+    flex-direction: column;
+  }
+
+  .corevaluetext {
+    font-size: 16px;
+    width: 100%;
+  }
+  .missiontext {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .keyvalue {
+    padding-top: 1em !important;
+  }
+
+  .reachtext {
+    font-size: 48px;
+  }
+
+  .contacttext {
+    font-size: 22px;
+    color: black;
+  }
+
+  .reachouttext {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .reachtext {
+    font-size: 28px;
+  }
+
+  .contactinformation {
+    padding-top: 1em !important;
+  }
+
+  .contactinformationlist {
+    padding-top: 1em !important;
+  }
+
+  /* .fifthbackground{
+    background-image: url(assets/images/Vector\ \(2\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 75vh;
+  } */
+
+  .firstcolemeployee {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .employeeimage {
+    width: 39% !important;
+    height: auto;
+  }
+
+  .employeecard {
+    width: 100%;
+    flex-direction: column;
+    height: 370px;
+  }
+
+  .employeereviews {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .employeereviewstars {
+    margin-top: 2em !important;
+  }
+
+  .missionimage {
+    padding-left: 2em !important;
+  }
+
+  .footerlist {
+    gap: 3em;
+    flex-direction: column;
+    padding-left: 3em !important;
+    padding-top: 20px !important;
+  }
+
+  .conandgetbtn {
+    margin-left: 1em !important;
   }
 }
