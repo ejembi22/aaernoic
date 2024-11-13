@@ -20,8 +20,40 @@ import Emp4 from "./assets/images/Ellipse 2158 (4).png";
 import Emp5 from "./assets/images/Ellipse 2158 (5).png";
 import Emp6 from "./assets/images/Ellipse 2158 (6).png";
 import Logo from "./assets/images/Logo (2).png";
+import { useState } from "react";
 
 const Firstsec = () => {
+ 
+  const employeeCard = [
+    {id:1, name:"John Davis  | ", position:"KEM-KEM CEO", employeereviews:"Highly reliable and responsive team!",starrate:Stars, image:Emp1 },
+    {id:2, name:"Dare Onajimi | ", position:"ONAM & CO. Founder.", employeereviews:"Their expertise in the industry and commitment to quality ensured smooth transactions and reliable delivery.", starrate:Stars, image:Emp3},
+    {id:3, name:"Aishat kamar | ", position:"Kamco Founder & CEO.", employeereviews:"Their team demonstrated deep industry knowledge and integrit in every interaction.", starrate:Stars, image:Emp4},
+    {id:4, name:"Kim Mary | ", position:"Uhi-chan LTD. MD.", employeereviews:"Their dedication to customer satisfaction and adherence to high standards set them apart in the industry.", starrate:Stars, image:Emp2},
+    {id:5, name:"Liyas Aleshin | ", position:"Memo B Co-Founder.", employeereviews:"Excellent experience working with Aaronic Energy Limited forour oil trading requirements.", starrate:Stars, image:Emp5},
+    {id:6, name:"Kemi Bakare | ", position:"Melbond CEO.", employeereviews:"Top-notch service from aaronic Energy Limited in marine  logistics as Their attention to detail and proactive approach made our shipping experience hassle-free.", starrate:Stars, image:Emp6},
+    {id:7, name:"John Davis | ", position:"KEM-KEM CEO", employeereviews:"Highly reliable and responsive team!", starrate:Stars, image:Emp1},
+    {id:8, name:"Kim Mary | ", position:"Uhi-chan LTD. MD.", employeereviews:"Their dedication to customer satisfaction and adherence to high standards set them apart in the industry.", starrate:Stars, image:Emp2},
+  ]
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const employeeSection = employeeCard.slice(currentIndex, currentIndex + 6);
+
+  const goToNext = () =>{
+    if(currentIndex + 6 < employeeCard.length) {
+      setCurrentIndex(currentIndex + 6);
+
+    }
+  }
+
+  const goToPrev = () => {
+    if (currentIndex - 6 >= 0){
+      setCurrentIndex(currentIndex - 6)
+    }
+  }
+
+ 
+
   return (
     <div className="row firstsectioncon">
       <div className="col-sm-12 col-md-12 col-lg-12 col-xlg-12 px-4 mt-5">
@@ -238,135 +270,36 @@ const Firstsec = () => {
         </div>
 
         <h2 className="text-center fw-bold">These Company trust us.</h2>
+        <div className="slideshow">
+        <div className="generalcard px-4">
+          
+          {employeeSection.map((employeeCard)=>(
+            <div key={employeeCard.id} className="employee_cardss ">
+              <div className="employeecardcontent d-flex">
+                <img src={employeeCard.image}alt={employeeCard.name} className="employeeimage"/>
 
-        <div className="row generalcard px-4">
-          <div className="col-sm-12 col-md-12 col-lg-6 col-xlg-6 px-5 firstcolemeployee">
-            <div className="d-flex  border employeecard">
-              <img src={Emp1} alt="Employee" className="employeeimage" />
-              <div>
-                <p className="employeenames px-4">
-                  John Davis |{" "}
-                  <span className="employeeposition"> KEM-KEM CEO. </span>
-                </p>
-                <p className="employeereviews px-4">
-                  Highly reliable and responsive team!
-                </p>
-                <img
-                  src={Stars}
-                  alt="Stars"
-                  className="px-4 mt-5 employeereviewstars "
-                />
+                <div className="px-4">
+                  <p className="employeenames">{employeeCard.name}<span className="employeeposition">{employeeCard.position}</span></p>
+                  <p className="employeereviews ">{employeeCard.employeereviews}</p>
+                  <img src={employeeCard.starrate}alt="Stars"/>
+                </div>
+
               </div>
+
             </div>
 
-            <div className="d-flex  border employeecard">
-              <img src={Emp3} alt="Employee" className="employeeimage" />
-              <div>
-                <p className="employeenames px-4">
-                  Dare Onajimi |{" "}
-                  <span className="employeeposition"> ONAM & CO. Founder.</span>
-                </p>
-                <p className="employeereviews px-4">
-                  Their expertise in the industry and commitment to quality
-                  ensured smooth transactions and reliable delivery.
-                </p>
-                <img
-                  src={Stars}
-                  alt="Stars"
-                  className="px-4 mt-5 employeereviewstars"
-                />
-              </div>
-            </div>
 
-            <div className="d-flex border employeecard">
-              <img src={Emp4} alt="Employee" className="employeeimage" />
-              <div>
-                <p className="employeenames px-4">
-                  {" "}
-                  Aishat kamar |{" "}
-                  <span className="employeeposition">
-                    {" "}
-                    Kamco Founder & CEO.
-                  </span>
-                </p>
-                <p className="employeereviews px-4">
-                  Their team demonstrated deep industry knowledge and integrity
-                  in every interaction.
-                </p>
-                <img
-                  src={Stars}
-                  alt="Stars"
-                  className="px-4 mt-5 employeereviewstars"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-12 col-md-12 col-lg-6 col-xlg-6">
-            <div className="d-flex border employeecard">
-              <img src={Emp2} alt="Employees" className=" employeeimage" />
-              <div>
-                <p className="employeenames px-4">
-                  Kim Mary |
-                  <span className="employeeposition"> Uhi-chan LTD. MD.</span>
-                </p>
-                <p className="employeereviews px-4">
-                  Their dedication to customer satisfaction and adherence to
-                  high standards set them apart in the industry.
-                </p>
-                <img
-                  src={Stars}
-                  alt="Stars"
-                  className="px-4 mt-5 employeereviewstars"
-                />
-              </div>
-            </div>
-            <div className="d-flex border employeecard">
-              <img src={Emp5} alt="Employees" className="employeeimage" />
-              <div>
-                <p className="employeenames px-4">
-                  Liyas Aleshin |
-                  <span className="employeeposition"> Memo B Co-Founder.</span>
-                </p>
-                <p className="employeereviews px-4">
-                  Excellent experience working with Aaronic Energy Limited for
-                  our oil trading requirements.
-                </p>
-                <img
-                  src={Stars}
-                  alt="Stars"
-                  className="px-4 mt-5 employeereviewstars"
-                />
-              </div>
-            </div>
 
-            <div className="d-flex border employeecard">
-              <img src={Emp6} alt="Employees" className="employeeimage" />
-              <div>
-                <p className="employeenames px-4">
-                  {" "}
-                  Kemi Bakare |{" "}
-                  <span className="employeeposition"> Melbond CEO.</span>
-                </p>
-                <p className="employeereviews px-4">
-                  Top-notch service from aaronic Energy Limited in marine
-                  logistics as Their attention to detail and proactive approach
-                  made our shipping experience hassle-free.
-                </p>
-                <img
-                  src={Stars}
-                  alt="Stars"
-                  className="px-4 mt-5 employeereviewstars"
-                />
-              </div>
-            </div>
-          </div>
+          ))}
+          
         </div>
         <div className="chevrondiv">
           <div></div>
           <div className="fs-1 px-5">
-            <i class="bx bxs-chevron-left-circle text-dark"></i>
-            <i class="bx bxs-chevron-right-circle text-warning"></i>
+            <i class="bx bxs-chevron-left-circle text-dark prev" onClick={goToPrev}></i>
+            <i class="bx bxs-chevron-right-circle text-warning next" onClick={goToNext}></i>
           </div>
+        </div>
         </div>
 
         <footer>
